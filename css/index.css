@@ -1,1 +1,290 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  Max-width: 100%;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+}
+.myFont {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #696969;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+p,
+h1,
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #696969;
+}
+th {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #696969;
+}
+body {
+  margin: 1% 2%;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+}
+body header nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3% 0;
+}
+body header nav ul {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  body header nav ul {
+    width: 50%;
+  }
+}
+body header nav ul li a {
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #696969;
+}
+body header .banner-container {
+  background: #E0FFFF;
+  border-radius: 5px;
+  padding: 4% 0 6% 0;
+}
+body header .banner-container img {
+  width: 30%;
+  margin: 0 0 2% 4%;
+}
+body header .banner-container .banner-top {
+  padding: 0 2%;
+  border-bottom: 1px solid #696969;
+  padding-bottom: 2%;
+}
+body header .banner-container .banner-top h1 {
+  margin: 1% 0;
+  font-size: 4rem;
+}
+body header .banner-container .banner-bottom {
+  padding: 2% 2%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+body header .banner-container .banner-bottom a {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #696969;
+  margin-top: 1%;
+  padding: 1% 2%;
+  background: #696969;
+  color: white;
+  width: 20%;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  border-radius: 5px;
+}
+@media (max-width: 500px) {
+  body header .banner-container .banner-bottom a {
+    letter-spacing: 0rem;
+    width: 30%;
+    padding-top: 1.5%;
+  }
+}
+body .intro {
+  margin: 4% 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+body .intro .intro-left,
+body .intro .intro-right {
+  width: 50%;
+}
+body .intro .intro-left h2 {
+  font-size: 3rem;
+}
+body .intro .intro-left p {
+  font-size: 1.7rem;
+  padding: 3% 0;
+}
+body .intro .intro-right {
+  padding: 3% 3%;
+}
+body .intro .intro-right p {
+  border: 1px solid #A9A9A9;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  body .intro .intro-right p {
+    padding: 10% 5%;
+  }
+}
+body .work-history table {
+  width: 100%;
+}
+body .work-history table .first-row th {
+  color: white;
+  background: MIDNIGHTBLUE;
+}
+body .work-history table .gray-row {
+  background: #E0FFFF;
+}
+body .work-history table .first-column {
+  font-weight: 900;
+  color: black;
+}
+body .contact {
+  padding: 4%;
+}
+body footer {
+  background: gray;
+  text-align: center;
+  padding: 4% 0;
+}
+body footer p {
+  color: white;
+}

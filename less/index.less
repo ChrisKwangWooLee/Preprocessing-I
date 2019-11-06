@@ -19,7 +19,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	// border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -50,10 +50,165 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	Max-width: 100%;
+	// border: 1px solid gray;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
 }
 
+// Variables
+@myBlack: #696969;
+@myColor: MIDNIGHTBLUE;
+@myBackground: #E0FFFF;
+
+// Mixins
+.myFont { 
+	font-family:'Oswald', sans-serif;
+	font-weight: normal;
+	font-size: 1.6rem;
+	color: @myBlack;
+}
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+p, h1, h2{
+	.myFont();
+}
+
+th {
+	.myFont();
+}
+body {
+	margin: 1% 2%;
+	header {
+		display: flex;
+		flex-direction: column;
+		nav {		
+			display: flex;
+			justify-content: flex-end;
+			margin: 3% 0;
+			ul {
+				width: 35%;
+				.flex();
+				
+				@media(max-width: 500px) {
+					width: 50%;
+				}
+				li a {
+					text-decoration: none;
+					.myFont();
+				}
+			}
+		}
+
+		.banner-container{
+			background: @myBackground;
+			border-radius: 5px;
+			padding: 4% 0 6% 0;
+			img {
+				width: 30%;
+				margin: 0 0 2% 4%;
+			}
+			.banner-top {
+				padding: 0 2%;
+				border-bottom: 1px solid @myBlack;
+				padding-bottom: 2%;
+				h1 {
+					font-size: 4rem;
+					margin: 1% 0;
+					font-size: 4rem;
+				}
+			}
+			.banner-bottom {
+				padding: 2% 2%;
+				.flex();
+				flex-direction: column;
+				a {
+					.myFont();
+					margin-top: 1%;
+					padding: 1% 2%;
+					background: @myBlack;
+					color: white;
+					width: 20%;
+					text-align: center;
+					text-decoration: none;
+					letter-spacing: 0.2rem;;
+					border-radius: 5px;
+
+					@media(max-width: 500px) {
+						letter-spacing: 0rem;
+						width: 30%;
+						padding-top: 1.5%;
+					}
+				}
+			}
+		}
+	}
+
+	.intro{
+		margin: 4% 0;
+		.flex();
+		flex-direction: row;
+		.intro-left, .intro-right {
+			width: 50%;
+		}
+		.intro-left{
+			h2 {
+				font-size: 3.0rem;
+			}
+			p {
+				font-size: 1.7rem;
+				padding: 3% 0;
+			}
+		}
+		.intro-right{
+			padding: 3% 3%;
+			p{
+				border: 1px solid #A9A9A9;
+				padding: 2%;
+				@media(max-width: 500px) {
+					padding: 10% 5%;
+				}
+			}
+		}
+	}
+
+	.work-history {
+		table{
+			width: 100%;
+			.first-row th{
+				color: white;
+				background: @myColor;
+			}
+			.gray-row {
+				background: @myBackground;
+			}
+
+			.first-column {
+				font-weight: 900;
+				color: black;
+			}
+
+		}
+	}
+
+	.contact {
+		padding: 4%;
+	}
+	footer {
+		background: gray;
+		text-align: center;
+		padding: 4% 0;
+
+		p {
+			color: white;
+		}
+	}
+
+}
